@@ -1,0 +1,434 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+body{
+    background-color: black;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.theSlidenav{
+    width: 250px;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    color: black;
+    background-color: white;
+    padding: 10px;
+}
+.logo{
+    font-size: 30px;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+nav form{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+}
+.wrap{
+    width: 100%;
+}
+.wrap input{
+    width: 90%;
+    padding: 10px;
+    z-index: 1;
+    transition: 0.3s;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.wrap label{
+  left: 20px;
+  top: 10px;
+  z-index: 2;
+}
+.pined{
+    width: 90%;
+    height: 60%;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.pined p{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn, .log_out{
+    width: 100%;
+    background: black;
+    color: white;
+    outline: none;
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+.btn:hover , .log_out:hover{
+    background-color: transparent;
+    color: black;
+}
+.btn i{
+ background-color: white;
+ color: black;    
+ padding: 2px;
+ border-radius: 150px;
+ margin-left: 10px;
+}
+.log_out i{
+    margin-left: 10px;
+}
+.Tasks{
+    width: 750px;
+    height: 100vh;
+    padding: 10px 0;
+}
+.theStatus{
+    width: 300px;
+}
+.Status{
+    position: fixed;
+    top: 0;
+    right: 0%;
+    width: 300px;
+    height: 100vh;
+    padding: 10px 0;
+    background-color: white;
+}
+.fa-bars{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+.continer{
+    position: absolute;
+    width: 40vmax;
+    height: 80vh;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.178);
+    border: 1px solid white;
+    padding: 10px;
+    display: none;
+    border-radius: 20px;
+    z-index: 100000000000000;
+}
+.ShowForm{
+    display: block;
+}
+.continer textarea{
+    background-color: black;
+    width: 100%;
+    height: 70vh;
+    color: white;
+    resize: none;
+    outline: none;
+    border: none;
+}
+.continer textarea:focus{
+    border: none;
+    outline: none;
+}
+.save_btn{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.save_btn:hover{
+    background-color: transparent;
+    color: white;
+}
+.head{
+    width: 100%;
+    color: white;
+    text-align: end;
+}
+.head i{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.head i:hover{
+    transform: scale(1.1);
+}
+.Message{
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    z-index: 1000000000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    border-radius: 20px;
+}
+.Message div{
+    width: 100%;
+    display: flex;
+    gap: 2px;
+}
+.Message button{
+    width: 50%;
+    padding: 10px 40px;
+    margin-top: 10px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.Message button:hover{
+    background-color: transparent;
+    color: black;
+}
+.Status{
+    padding: 10px;
+    transition: 1s;
+}
+.weather{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.Calendar{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px 0;
+    overflow: scroll;
+}
+.Calendar ul{
+    display: flex;
+    gap: 2px;
+    width: 100%;
+}
+.Calendar ul li{
+    background-color: black;
+    color: white;
+    padding: 30px 10px;
+    border-radius: 20px;
+    width: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.Calendar ul li p{
+    rotate: 90deg;
+    margin-top: 5px;
+}
+.finished{
+    margin: 10px 0;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+.ntasks{
+    color: white;
+}
+.ntasks h1{
+    font-size: 50px;
+}
+.fa-ellipsis{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 20px;
+    left: 10px;
+    display: none;
+    rotate: 90deg;
+}
+.Tasks{
+    color: white;
+    font-size: 3vmax;
+    padding: 10px 0;
+}
+.tasksConiner{
+    height: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.cards{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: 0.5s;
+    margin: 10px 0;
+}
+
+.tasknumber{
+ position: absolute;
+ font-size: 5vmax;
+ right: 0;
+ bottom: 0;
+ color: rgba(77, 77, 77, 0.527);
+ z-index: 2;
+}
+.fa-ellipsis-vertical{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    transition: 0.3s;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+.fa-ellipsis-vertical:hover{
+    color: white;
+    transform: scale(1.1);
+}
+.moreButtons{
+    position: absolute;
+    top: -20%;
+    left: 0;
+    border: 1px solid white;
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    display: none;
+    transition: 0.3s;
+}
+.Showmore{
+    display: flex;
+}
+.moreButtons i{
+    transition: 0.3s;
+}
+.moreButtons i:hover{
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+.more{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+.more input[type=checkbox] {
+    accent-color: white;
+}
+/* mobile veiw of max-width 375px == 23.4375em, 750 = 46.875em */
+@media (max-width: 23.4375em) {
+    .SideNav{
+        position: fixed;
+        left: -100%;
+        transition: 1s;
+        z-index: 1000000000000000;
+    }
+    .Status{
+        position: fixed;
+        padding: 20px;
+        right: -100%;
+        z-index: 1000000000000000;
+
+    }
+    .ShowNav{
+        left: 0%;
+    }
+    .fa-bars{
+        display: block;
+    }
+    .fa-ellipsis{
+        display: block;
+    }
+    .Showstatus{
+        right: 0;
+    }
+    .Tasks{
+        margin-top: 50px;
+    }
+    .Tasks h1{
+        margin-left: 20px;
+    }
+    .cards{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 50.4375em) {
+    .SideNav{
+        position: fixed;
+        left: -100%;
+        transition: 1s;
+        z-index: 1000000000000000;
+
+    }
+    .Status{
+        position: fixed;
+        padding: 20px;
+        right: -100%;
+        z-index: 1000000000000000;
+
+    }
+    .ShowNav{
+        left: 0%;
+    }
+    .fa-bars{
+        display: block;
+    }
+    .fa-ellipsis{
+        display: block;
+    }
+    .Showstatus{
+        right: 0;
+    }
+    .Tasks{
+        margin-top: 50px;
+    }
+    .Tasks h1{
+        margin-left: 20px;
+    }
+    .cards{
+        margin-bottom: 10px;
+    }
+}
